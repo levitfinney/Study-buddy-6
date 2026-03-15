@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>AI Study Helper</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/nerdamer/1.1.13/nerdamer.core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/nerdamer/1.1.13/Algebra.js"></script>
+
+<script defer src="script.js"></script>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>AI Study Helper</h1>
+
+<div class="modeButtons">
+<button onclick="setMode('student')">Student Mode</button>
+<button onclick="setMode('teacher')">Teacher Mode</button>
+</div>
+
+</header>
+
+<div class="layout">
+
+<nav>
+
+<button onclick="showTab('home')">Home</button>
+<button onclick="showTab('tutor')">Tutor</button>
+<button onclick="showTab('math')">Math</button>
+<button onclick="showTab('quiz')">Quiz</button>
+<button onclick="showTab('tasks')">Tasks</button>
+<button onclick="showTab('notes')">Notes</button>
+<button id="teacherTab" onclick="showTab('teacher')">Teacher</button>
+
+</nav>
+
+<main>
+
+<section id="home" class="tab">
+<h2>Welcome</h2>
+<p>This website helps students study topics and practice quizzes.</p>
+</section>
+
+<section id="tutor" class="tab">
+
+<h2>AI Tutor</h2>
+
+<input id="topicInput" placeholder="Enter topic">
+
+<button onclick="generateStudyGuide()">Create Study Guide</button>
+
+<div id="tutorOutput" class="card"></div>
+
+<button onclick="copyTutor()">Copy Notes</button>
+
+</section>
+
+<section id="math" class="tab">
+
+<h2>Math Solver</h2>
+
+<input id="mathInput" placeholder="Example: 2x+5=15">
+
+<button onclick="solveMath()">Solve</button>
+
+<div id="mathOutput" class="card"></div>
+
+</section>
+
+<section id="quiz" class="tab">
+
+<h2>Quiz Maker</h2>
+
+<input id="quizTopic" placeholder="Quiz topic">
+
+<button onclick="generateQuiz()">Create Quiz</button>
+
+<div id="quizArea"></div>
+
+</section>
+
+<section id="tasks" class="tab">
+
+<h2>Study Tasks</h2>
+
+<input id="taskInput" placeholder="New study task">
+
+<button onclick="addTask()">Add</button>
+
+<div id="taskList"></div>
+
+</section>
+
+<section id="notes" class="tab">
+
+<h2>Notes</h2>
+
+<textarea id="noteBox"></textarea>
+
+<button onclick="copyNotes()">Copy Notes</button>
+
+</section>
+
+<section id="teacher" class="tab">
+
+<h2>Teacher Dashboard</h2>
+
+<p>Teacher tools available.</p>
+
+<div id="teacherStats"></div>
+
+</section>
+
+</main>
+
+</div>
+
+</body>
+
+</html>
